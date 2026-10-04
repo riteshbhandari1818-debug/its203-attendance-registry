@@ -16,7 +16,11 @@ namespace AttendanceRegistry
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            students = dataManager.LoadStudents();
+            foreach (var student in students)
+            {
+                lstStudents.Items.Add(student.ToString());
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
